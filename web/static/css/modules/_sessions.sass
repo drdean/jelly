@@ -1,5 +1,5 @@
 .sessions.new, .registrations.new
-  background: $purple
+  background: $gray
   background-size: cover
   position: relative
   height: 100%
@@ -7,7 +7,7 @@
   main
     +transform(translate(-50%, -50%))
     position: absolute
-    width: 450px
+    width: 460px
     top: 40%
     left: 50%
     text-align: center
@@ -25,26 +25,25 @@
         vertical-align: middle
 
   form
-    margin-bottom: $base-spacing
-    .field
-      margin: .5em 0
+    width: 460px
+    padding: 40px 30px
+    .mdl-textfield
+      margin: auto
+      margin-bottom: 10px
+      .mdl-textfield__input
+        font-size: 28px
 
-    [type="text"], [type="email"], [type="password"], button
-      border: 0px none
-      width: 350px
-      padding: 1em
-      font-size: 1.1em
+    .mdl-button
+      width: 100px
+      margin: 10px auto
 
-    button
-      +transition
-      background: transparent
-      color: #fff
-      border: 1px solid #fff
+.login-card-wide
 
-      &:hover
-        color: $purple
-        background: #fff
 
+
+.login-link
+  margin-top: 20px
+  display: block
   a
     +transition
     color: rgba(#fff, .5)

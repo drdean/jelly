@@ -18,7 +18,7 @@ class AuthenticatedContainer extends React.Component {
       <div id="authentication_container" className="application-container">
         <Header/>
 
-        <div className='main-container'>
+        <div className='main-container mdl-layout mdl-js-layout'>
           {this.props.children}
         </div>
       </div>

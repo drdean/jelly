@@ -20,6 +20,7 @@ var config = module.exports = {
     application: [
       web('css/application.sass'),
       web('js/application.js'),
+      web('../../node_modules/material-design-lite/material.js'),
     ],
   },
 

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trello tribute done in Elixir, Phoenix, React and Redux.">
-    <meta name="author" content="ricardo@codeloveandboards.com">
+    <meta name="description" content="Jelly Agile Board.">
+    <meta name="author" content="drdean@qq.com">
 
-    <title>Phoenix Trello</title>
+    <title>Jelly</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/application.css") %>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link id="favicon" rel="icon" type="image/png" sizes="64x64" href="<%= static_path(@conn, "/images/favicon.png") %>"/>
   </head>
 
@@ -17,9 +18,8 @@
     <main id="main_container" role="main"></main>
     <footer id="main_footer">
       <small>
-        <a href="https://trello.com/" target="_blank">Trello</a> tribute for educational purposes
-        crafted with ♥ for <a href="https://diacode.com/">Diacode</a>
-        by <a href="https://twitter.com/bigardone">@bigardone</a></small>
+        <a href="" target="_blank">Jelly</a> tribute for educational purposes
+        crafted with ♥</small>
     </footer>
     <script src="<%= static_path(@conn, "/js/application.js") %>"></script>
   </body>

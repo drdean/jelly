@@ -9,6 +9,7 @@ import SessionActions   from '../actions/sessions';
 import HeaderActions    from '../actions/header';
 
 class Header extends React.Component {
+
   _handleBoardsClick(e) {
     e.preventDefault();
 
@@ -124,7 +125,7 @@ class Header extends React.Component {
         <nav id="boards_nav">
           <ul>
             <li>
-              <a href="#" onClick={::this._handleBoardsClick}><i className="fa fa-columns"/> Boards</a>
+              <a className="board-switch" onClick={::this._handleBoardsClick}><i className="fa fa-bars"/></a>
               {::this._renderBoards()}
             </li>
           </ul>

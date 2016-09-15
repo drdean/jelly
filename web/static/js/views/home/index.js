@@ -10,6 +10,7 @@ import BoardForm            from '../../components/boards/form';
 class HomeIndexView extends React.Component {
   componentDidMount() {
     setDocumentTitle('Boards');
+    componentHandler.upgradeAllRegistered();
   }
 
   componentWillUnmount() {

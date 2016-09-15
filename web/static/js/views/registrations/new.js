@@ -8,6 +8,7 @@ import Actions              from '../../actions/registrations';
 class RegistrationsNew extends React.Component {
   componentDidMount() {
     setDocumentTitle('Sign up');
+    componentHandler.upgradeAllRegistered();
   }
 
   _handleSubmit(e) {
@@ -30,35 +31,40 @@ class RegistrationsNew extends React.Component {
     const { errors } = this.props;
 
     return (
-      <div className="view-container registrations new">
+      <div className="mdl-layout__container registrations new">
         <main>
           <header>
             <div className="logo" />
           </header>
-          <form id="sign_up_form" onSubmit={::this._handleSubmit}>
-            <div className="field">
-              <input ref="firstName" id="user_first_name" type="text" placeholder="First name" required={true} />
+          <form id="sign_up_form" className="login-card-wide mdl-card mdl-shadow--2dp mdl-color-text--grey-600" onSubmit={::this._handleSubmit}>
+            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input ref="firstName" id="user_first_name" className="mdl-textfield__input" type="text" required={true} />
+              <label className="login-card-wide mdl-textfield__label" htmlFor="user_first_name">First name...</label>
               {renderErrorsFor(errors, 'first_name')}
             </div>
-            <div className="field">
-              <input ref="lastName" id="user_last_name" type="text" placeholder="Last name" required={true} />
+            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input ref="lastName" id="user_last_name" className="mdl-textfield__input" type="text" required={true} />
+              <label className="login-card-wide mdl-textfield__label" htmlFor="user_last_name">Last name...</label>
               {renderErrorsFor(errors, 'last_name')}
             </div>
-            <div className="field">
-              <input ref="email" id="user_email" type="email" placeholder="Email" required={true} />
+            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input ref="email" id="user_email" className="mdl-textfield__input" type="email" required={true} />
+              <label className="login-card-wide mdl-textfield__label" htmlFor="user_email">Email...</label>
               {renderErrorsFor(errors, 'email')}
             </div>
-            <div className="field">
-              <input ref="password" id="user_password" type="password" placeholder="Password" required={true} />
+            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input ref="password" id="user_password" className="mdl-textfield__input" type="password" required={true} />
+              <label className="login-card-wide mdl-textfield__label" htmlFor="user_password">Password...</label>
               {renderErrorsFor(errors, 'password')}
             </div>
-            <div className="field">
-              <input ref="passwordConfirmation" id="user_password_confirmation" type="password" placeholder="Confirm password" required={true} />
+            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input ref="passwordConfirmation" id="user_password_confirmation" className="mdl-textfield__input" type="password" required={true} />
+              <label className="login-card-wide mdl-textfield__label" htmlFor="user_password_confirmation">Confirm password...</label>
               {renderErrorsFor(errors, 'password_confirmation')}
             </div>
             <button type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Sign up</button>
           </form>
-          <Link to="/sign_in">Sign in</Link>
+          <Link className="login-link" to="/sign_in">Sign in</Link>
         </main>
       </div>
     );
