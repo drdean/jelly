@@ -8,6 +8,7 @@ import SessionsNew                  from '../views/sessions/new';
 import BoardsShowView               from '../views/boards/show';
 import CardsShowView                from '../views/cards/show';
 import Actions                      from '../actions/sessions';
+import { layout, header, menus, card, textfield, button }  from 'material-design-lite';
 
 export default function configRoutes(store) {
   const _ensureAuthenticated = (nextState, replace, callback) => {

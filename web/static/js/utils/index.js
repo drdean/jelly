@@ -68,7 +68,7 @@ export function renderErrorsFor(errors, ref) {
   return errors.map((error, i) => {
     if (error[ref]) {
       return (
-        <div key={i} className="error">
+        <div key={i} className="mdl-textfield__error">
           {error[ref]}
         </div>
       );

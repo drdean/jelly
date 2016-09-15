@@ -1,10 +1,9 @@
-$header-height: $base-line-height * 1.8em
+$header-height: $base-line-height * 2em
 
 .main-header
   +clearfix
-  background: $dark-purple
+  background: $blue
   line-height: $header-height
-  padding: 0 $base-spacing
   color: #fff
   position: relative
 
@@ -41,8 +40,6 @@ $header-height: $base-line-height * 1.8em
           +transition
           color: rgba(#fff, .5)
           background: rgba(#fff, .15)
-          border-radius: $base-border-radius
-          padding: .3em .5em
           line-height: 1em
 
           &.current-user
@@ -54,7 +51,7 @@ $header-height: $base-line-height * 1.8em
             .react-gravatar
               width: 30px
               height: 30px
-              border-radius: $base-border-radius
+              border-radius: 100%
               margin-right: .5em
               position: absolute
               top: 50%
@@ -75,6 +72,12 @@ $header-height: $base-line-height * 1.8em
 
         a
           display: block
+
+        .board-switch
+          line-height: $header-height
+          width: $header-height
+          text-align: center
+          font-size: 22px
 
         .dropdown
           position: absolute
@@ -104,6 +107,8 @@ $header-height: $base-line-height * 1.8em
             li
               display: block
               margin-bottom: .3em
+
+
 
               a
                 +transition

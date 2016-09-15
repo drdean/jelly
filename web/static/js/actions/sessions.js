@@ -3,6 +3,7 @@ import Constants                          from '../constants';
 import { Socket }                         from 'phoenix';
 import { httpGet, httpPost, httpDelete }  from '../utils';
 
+
 export function setCurrentUser(dispatch, user) {
   const socket = new Socket('/socket', {
     params: { token: localStorage.getItem('phoenixAuthToken') },

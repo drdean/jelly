@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <meta name="description" content="Jelly">
+=======
+    <meta name="description" content="Jelly Agile Board.">
+>>>>>>> origin/master
     <meta name="author" content="drdean@qq.com">
 
     <title>Jelly</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/application.css") %>">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link id="favicon" rel="icon" type="image/png" sizes="64x64" href="<%= static_path(@conn, "/images/favicon.png") %>"/>
   </head>
 
@@ -17,7 +22,12 @@
     <main id="main_container" role="main"></main>
     <footer id="main_footer">
       <small>
+<<<<<<< HEAD
         <a href="#" target="_blank">Jelly</a> 2016 crafted with ♥ </small>
+=======
+        <a href="" target="_blank">Jelly</a> tribute for educational purposes
+        crafted with ♥</small>
+>>>>>>> origin/master
     </footer>
     <script src="<%= static_path(@conn, "/js/application.js") %>"></script>
   </body>
