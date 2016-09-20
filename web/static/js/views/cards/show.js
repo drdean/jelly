@@ -8,6 +8,7 @@ class CardsShowView extends React.Component {
     const { dispatch, params } = this.props;
 
     dispatch(Actions.showCard(this._getCard(params.id[1])));
+    componentHandler.upgradeAllRegistered();
   }
 
   componentWillUnmount() {

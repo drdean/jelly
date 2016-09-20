@@ -1,23 +1,23 @@
-$header-height: $base-line-height * 2em
+$header-height: 64px
 
 .main-header
   +clearfix
-  background: $blue
-  line-height: $header-height
+  background: $indigo
   color: #fff
   position: relative
 
   .logo
     +transform(translate(-50%, -50%))
     display: inline-block
-    background: url(/images/logo.png) 0 0 no-repeat
-    background-size: contain
     height: 32px
-    width: 110px
+    width: 60px
     position: absolute
     top: 50%
     left: 50%
 
+  .nav-user
+    margin-top: 20px
+    margin-right: 20px
 
   nav
     float: left
@@ -41,24 +41,22 @@ $header-height: $base-line-height * 2em
           color: rgba(#fff, .5)
           background: rgba(#fff, .15)
           line-height: 1em
+          padding: 8px 10px
+          border-radius: 4px
 
           &.current-user
             position: relative
             overflow: hidden
-            padding-left: 35px
-            margin-right: .5em
+            margin-right: 1em
 
             .react-gravatar
-              width: 30px
-              height: 30px
+              width: 40px
+              height: 40px
               border-radius: 100%
-              margin-right: .5em
               position: absolute
               top: 50%
-              margin-top: -15px
-              left: 0
-
-
+              margin-top: -20px
+              left: -55px
 
           .fa
             color: #fff
@@ -74,10 +72,12 @@ $header-height: $base-line-height * 2em
           display: block
 
         .board-switch
-          line-height: $header-height
+          line-height: 52px
           width: $header-height
+          height: $header-height
           text-align: center
           font-size: 22px
+          border-radius: 0
 
         .dropdown
           position: absolute

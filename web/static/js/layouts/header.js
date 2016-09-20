@@ -131,9 +131,9 @@ class Header extends React.Component {
           </ul>
         </nav>
         <Link to='/'>
-          <span className='logo'/>
+          <span><img className="logo" src="../images/logo.svg" /></span>
         </Link>
-        <nav className="right">
+        <nav className="nav-user right">
           <ul>
             <li>
               {this._renderCurrentUser()}

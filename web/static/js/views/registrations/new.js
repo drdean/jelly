@@ -34,7 +34,7 @@ class RegistrationsNew extends React.Component {
       <div className="mdl-layout__container registrations new">
         <main>
           <header>
-            <div className="logo" />
+            <div><img className="logo" src="images/logo.svg" /></div>
           </header>
           <form id="sign_up_form" className="login-card-wide mdl-card mdl-shadow--2dp mdl-color-text--grey-600" onSubmit={::this._handleSubmit}>
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -62,7 +62,7 @@ class RegistrationsNew extends React.Component {
               <label className="login-card-wide mdl-textfield__label" htmlFor="user_password_confirmation">Confirm password...</label>
               {renderErrorsFor(errors, 'password_confirmation')}
             </div>
-            <button type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Sign up</button>
+            <button type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Sign up</button>
           </form>
           <Link className="login-link" to="/sign_in">Sign in</Link>
         </main>

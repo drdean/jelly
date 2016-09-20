@@ -6,6 +6,11 @@ import PageClick                from 'react-page-click';
 import Actions                  from '../../actions/current_board';
 
 export default class BoardMembers extends React.Component {
+
+  componentDidUpdate() {
+    componentHandler.upgradeAllRegistered();
+  }
+
   _renderUsers() {
     return this.props.members.map((member) => {
       const index = this.props.connectedUsers.findIndex((cu) => {
@@ -38,13 +43,16 @@ export default class BoardMembers extends React.Component {
 
     return (
       <PageClick onClick={::this._handleCancelClick}>
-        <ul className="drop-down active">
+        <ul className="drop-down mdl-card mdl-shadow--2dp active">
           <li>
             <form onSubmit={::this._handleSubmit}>
-              <h4>Add new members</h4>
+              <h5>Add new members</h5>
               {::this._renderError()}
-              <input ref="email" type="email" required={true} placeholder="Member email"/>
-              <button type="submit">Add member</button> or <a onClick={::this._handleCancelClick} href="#">cancel</a>
+              <div className="mdl-textfield mdl-js-textfield">
+                <input className="mdl-textfield__input" ref="email" type="email" id="add-new-email" required={true} />
+                <label className="mdl-textfield__label" htmlFor="add-new-email">Member email</label>
+              </div>
+              <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Add member</button> or <a onClick={::this._handleCancelClick} href="#">cancel</a>
             </form>
           </li>
         </ul>

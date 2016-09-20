@@ -39,7 +39,7 @@ class SessionsNew extends React.Component {
       <div className='mdl-layout__container sessions new'>
         <main>
           <header>
-            <div className="" />
+            <div><img className="logo" src="images/logo.svg" /></div>
           </header>
           <form id="sign_in_form" className="login-card-wide mdl-card mdl-shadow--2dp mdl-color-text--grey-600"  onSubmit={::this._handleSubmit}>
             {::this._renderError()}
@@ -61,7 +61,7 @@ class SessionsNew extends React.Component {
                 <label className="mdl-textfield__label" htmlFor="user_password">Password...</label>
                 {renderErrorsFor(errors, 'user_password')}
             </div>
-            <button type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Sign in</button>
+            <button type="submit" className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Sign in</button>
           </form>
           <Link className="login-link" to="/sign_up">Create new account</Link>
         </main>

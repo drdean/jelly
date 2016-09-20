@@ -5,6 +5,7 @@ import PageClick                from 'react-page-click';
 export default class ListForm extends React.Component {
   componentDidMount() {
     this.refs.name.focus();
+    componentHandler.upgradeAllRegistered();
   }
 
   _handleSubmit(e) {

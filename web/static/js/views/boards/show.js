@@ -21,6 +21,7 @@ class BoardsShowView extends React.Component {
     }
 
     this.props.dispatch(Actions.connectToChannel(socket, this.props.params.id));
+    componentHandler.upgradeAllRegistered();
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -197,7 +198,7 @@ class BoardsShowView extends React.Component {
     return (
       <div className="view-container boards show">
         <header className="view-header">
-          <h3>{name}</h3>
+          <h4>{name}</h4>
           {::this._renderMembers()}
         </header>
         <div className="canvas-wrapper">

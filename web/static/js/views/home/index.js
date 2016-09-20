@@ -7,6 +7,8 @@ import Actions              from '../../actions/boards';
 import BoardCard            from '../../components/boards/card';
 import BoardForm            from '../../components/boards/form';
 
+import { layout, header, menus, card, textfield, button }  from 'material-design-lite';
+
 class HomeIndexView extends React.Component {
   componentDidMount() {
     setDocumentTitle('Boards');
@@ -24,14 +26,14 @@ class HomeIndexView extends React.Component {
 
     const iconClasses = classnames({
       fa: true,
-      'fa-user': !fetching,
+      'fa-th-large': !fetching,
       'fa-spinner': fetching,
       'fa-spin':    fetching,
     });
 
     if (!fetching) {
       content = (
-        <div className="boards-wrapper">
+        <div className="boards-wrapper mdl-grid">
           {::this._renderBoards(this.props.ownedBoards)}
           {::this._renderAddNewBoard()}
         </div>
@@ -40,8 +42,8 @@ class HomeIndexView extends React.Component {
 
     return (
       <section>
-        <header className="view-header">
-          <h3><i className={iconClasses} /> My boards</h3>
+        <header className="view-header mdl-color-text--grey-600">
+          <h4><i className={iconClasses} /> My boards</h4>
         </header>
         {content}
       </section>
@@ -78,7 +80,7 @@ class HomeIndexView extends React.Component {
     return (
       <section>
         <header className="view-header">
-          <h3><i className="fa fa-users" /> Other boards</h3>
+          <h4><i className="fa fa-users" /> Other boards</h4>
         </header>
         <div className="boards-wrapper">
           {::this._renderBoards(invitedBoards)}
@@ -89,7 +91,7 @@ class HomeIndexView extends React.Component {
 
   _renderAddButton() {
     return (
-      <div className="board add-new" onClick={::this._handleAddNewClick}>
+      <div className="board add-new mdl-cell mdl-cell--3-col" onClick={::this._handleAddNewClick}>
         <div className="inner">
           <a id="add_new_board">Add new board...</a>
         </div>
@@ -109,7 +111,7 @@ class HomeIndexView extends React.Component {
 
   render() {
     return (
-      <div className="view-container boards index">
+      <div className="view-container mdl-layout__container boards index">
         {::this._renderOwnedBoards()}
         {::this._renderOtherBoards()}
       </div>

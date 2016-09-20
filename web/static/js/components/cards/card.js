@@ -110,7 +110,7 @@ export default class Card extends React.Component {
     return connectDragSource(
       connectDropTarget(
         <div id={`card_${id}`} className={classes} style={styles} onClick={::this._handleClick}>
-          <div className="card-content">
+          <div className="card-content mdl-shadow--2dp">
             {::this._renderTags()}
             {name}
             {::this._renderFooter()}

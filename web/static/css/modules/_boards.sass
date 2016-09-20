@@ -9,27 +9,39 @@
     +flex-flow(row wrap)
     margin: 0 (-$margin/2) $margin (-$margin/2)
 
-    .board
+    .mdl-card
       +transition
-      +flex(0 0 25%)
       cursor: pointer
+      margin-right: $base-spacing
+      width: 100%
 
+    .board
       .inner
-        background: rgba($light-gray, .9)
-        border-radius: $base-border-radius
-        margin: 0 $margin/2 $margin $margin/2
+        margin: $margin/2 0
         line-height: 1.75em
         overflow: hidden
-        padding: $base-spacing/2
+        padding: $base-spacing/2 $base-spacing
         min-height: 5em
         animation-duration: .3s
         animation-name: fadeIn
 
+        h4
+          margin: 20px 0
+
+      .new-board-form
+        margin-bottom: 10px
 
       &.form
         input
           +fill-parent
-          margin-bottom: .5em
+          height: 36px
+
+        h5
+          margin-top: 5px
+        .mdl-textfield
+          margin-top: -20px
+        .mdl-button
+          margin-right: 10px
 
       &.add-new
         .inner
@@ -37,9 +49,11 @@
           background: rgba(#000, .1)
           cursor: pointer
           color: $gray
+          height: 98px
 
           &:hover
             background: rgba(#000, .2)
+
 
         .inner
           position: relative
@@ -58,10 +72,10 @@
     color: #fff
   .view-header
     position: relative
+    padding-left: 20px
 
-    h3
+    h4
       margin: 0
-      color: #fff
 
     .board-users
       +transform(translateY(-50%))
@@ -70,33 +84,36 @@
       padding: 0
       position: absolute
       right: 0
-      top: 50%
+      top: 58%
       z-index: 99
 
       > span > li
         display: inline-block
-        margin-left: .5em
+        margin-left: .8em
 
         &.connected
           opacity: 1
 
           .react-gravatar
+            border-radius: 100%
             opacity: 1
 
         .react-gravatar, .add-new
           +transition
-          border-radius: $base-border-radius
-          width: 30px
-          height: 30px
+          border-radius: 100%
+          width: 36px
+          height: 36px
+          border: 1px solid $light-gray
+          color: $light-gray
+          display: block
           opacity: .2
 
         .add-new
           +transition
           opacity: 1
-          display: block
           position: relative
-          border: 1px solid rgba(#fff, .5)
-          color: rgba(#fff, .5)
+          color: $light-gray
+          border: 1px solid $light-gray
           line-height: 1em
           font-size: .9em
 
@@ -107,8 +124,11 @@
             left: 50%
 
           &:hover
-            color: #fff
-            border-color: #fff
+            color: $gray
+            border-color: $gray
+
+        .mdl-card
+          min-height: 0
 
         .drop-down
           +transition
@@ -116,13 +136,16 @@
           right: 0
           top: 100%
           list-style: none
-          padding: $base-spacing/2
-          background: rgba($light-gray, .9)
-          border-radius: $base-border-radius
+          padding: $base-spacing
+          background: $white
           min-width: 20em
           display: none
           animation-duration: .3s
           animation-name: fadeIn
+
+          h5
+            margin-top: 0
+            margin-bottom: 0
 
           &.active
             display: block
@@ -130,7 +153,9 @@
           form
             input
               +fill-parent
-              margin-bottom: .5em
+              height: 36px
+            .mdl-button
+              margin-right: 10px
 
       .avatar-appear
         opacity: 0.01
@@ -175,15 +200,18 @@
     +display(flex)
 
     .list
-      +flex(0 0 17em)
-      margin: 0 $margin/1.5 0 0
+      +flex(0 0 22em)
+      margin: 0 $margin 0 0
       animation-duration: .3s
       animation-name: fadeIn
 
+      h5
+        margin: 10px 5px 15px 5px
+
       > .inner
-        background: rgba($light-gray, .9)
+        background: rgba($light-gray, .7)
         border-radius: $base-border-radius
-        padding: $base-spacing/2
+        padding: $base-spacing/1.5
         cursor: -webkit-grab
         cursor: -moz-grab
         cursor: grab
@@ -240,7 +268,7 @@
 
       .card:not(.form)
         +transition
-        margin-bottom: $base-spacing/3
+        margin-bottom: $base-spacing/1.5
         cursor: pointer
         animation-duration: .3s
         animation-name: fadeIn
@@ -260,13 +288,11 @@
             position: absolute
             top: 0
             left: 0
-            margin-bottom: $base-spacing/3
+            margin-bottom: $base-spacing/2
 
         .card-content
           background: #fff
-          padding: $base-spacing/3
-          border-radius: $base-border-radius
-          border-bottom: 1px solid $gray
+          padding: $base-spacing/2
 
         .tags-wrapper
           +clearfix
@@ -281,7 +307,7 @@
               box-shadow: 0 0 0
 
         .react-gravatar
-          border-radius: $base-border-radius
+          border-radius: 100%
           width: 30px
           height: 30px
           float: right

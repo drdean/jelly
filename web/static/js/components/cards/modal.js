@@ -14,6 +14,7 @@ export default class CardModal extends React.Component {
     const { edit } = this.props;
 
     if (edit) this.refs.name.focus();
+    componentHandler.upgradeAllRegistered();
   }
 
   _closeModal(e) {
