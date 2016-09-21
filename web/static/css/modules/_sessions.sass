@@ -1,5 +1,5 @@
 .sessions.new, .registrations.new
-  background: $light-gray
+  background: $indigo
   background-size: cover
   position: relative
   height: 100%
@@ -8,7 +8,7 @@
     +transform(translate(-50%, -50%))
     position: absolute
     width: 460px
-    top: 50%
+    top: 45%
     left: 50%
     text-align: center
 
@@ -19,7 +19,7 @@
       .logo
         display: inline-block
         background-size: contain
-        height: 62px
+        height: 54px
         width: 198px
         vertical-align: middle
 
@@ -43,9 +43,16 @@
 .login-link
   margin-top: 20px
   display: block
-  a
-    +transition
-    color: rgba(#fff, .5)
+  color: rgba(#fff, .5)
+  +transition
+  color: rgba(#fff, .5)
 
-    &:hover
-      color: #fff
+  &:hover
+    color: #fff
+
+small
+  position: absolute
+  bottom: 2em
+  color: rgba(#fff, .4)
+  left: 50%
+  margin-left: -170px

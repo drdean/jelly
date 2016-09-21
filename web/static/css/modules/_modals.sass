@@ -22,10 +22,9 @@
     overflow-y: scroll
 
     .md-content
-      $width: 700px
+      $width: 800px
       +pad($base-spacing)
-      border-radius: $base-border-radius
-      background: $light-gray
+      background: $white
       position: absolute
       pointer-events: all
       width: $width
@@ -38,13 +37,16 @@
       > header
         margin-bottom: 1em
 
+      h6
+        margin-top: 0
+
 
   .card-modal
     +clearfix
     position: relative
 
     .react-gravatar
-      border-radius: $base-border-radius
+      border-radius: 100%
       width: 30px
       height: 30px
 
@@ -59,20 +61,20 @@
         color: $dark-gray
 
     .info
-      +span-columns(9)
+      h3
+        margin-top: 0
 
     .options
-      +span-columns(3)
       position: relative
       overflow: visible
+      margin-top: 40px
 
       .button
         +fill-parent
         +transition
-        background: #fff
-        padding: .3em .5em
+        background: tint($light-gray, 30)
+        padding: .5em 1em
         border-radius: $base-border-radius
-        border-bottom: 1px solid $gray
         display: block
         color: $base-font-color
         font-weight: bold
@@ -83,7 +85,7 @@
           margin-right: .5em
 
         &:hover
-          background: $blue
+          background: $indigo
           color: #fff
 
           .fa
@@ -106,14 +108,18 @@
       margin: $base-spacing 0
 
       .gravatar-wrapper
-        +span-columns(1)
+        float: left
+        margin-right: $base-spacing/2
         .react-gravatar
-          border-radius: $base-border-radius
+          border-radius: 100%
           width: 30px
           height: 30px
 
       .form-controls
-        +span-columns(11)
+        background: tint($light-gray, 20)
+        float: left
+        width: 87%
+        padding: $base-spacing/2
 
     .comment
       +clearfix
@@ -122,19 +128,21 @@
       animation-name: fadeIn
 
       .gravatar-wrapper
-        +span-columns(1)
-
+        float: left
+        margin-right: $base-spacing/2
 
       .info-wrapper
-        +span-columns(11)
+        float: left
+        width: 87%
         h5
           margin-bottom: .5em
+          margin-top: 0
         .text
-          background: #fff
-          border-radius: $base-border-radius
-          padding: .5em
+          padding: 0
           border: 0px none
-          border-bottom: 1px solid $gray
+        small
+          color: $gray
+          margin-top: $base-spacing/4
 
     .items-wrapper
       +clearfix

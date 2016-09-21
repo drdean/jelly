@@ -31,12 +31,12 @@ class RegistrationsNew extends React.Component {
     const { errors } = this.props;
 
     return (
-      <div className="mdl-layout__container registrations new">
+      <div className="registrations new">
         <main>
           <header>
-            <div><img className="logo" src="images/logo.svg" /></div>
+            <div><img className="logo" src="/images/logo.svg" /></div>
           </header>
-          <form id="sign_up_form" className="login-card-wide mdl-card mdl-shadow--2dp mdl-color-text--grey-600" onSubmit={::this._handleSubmit}>
+          <form id="sign_up_form" className="login-card-wide mdl-card mdl-shadow--6dp mdl-color-text--grey-600" onSubmit={::this._handleSubmit}>
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <input ref="firstName" id="user_first_name" className="mdl-textfield__input" type="text" required={true} />
               <label className="login-card-wide mdl-textfield__label" htmlFor="user_first_name">First name...</label>
@@ -66,6 +66,11 @@ class RegistrationsNew extends React.Component {
           </form>
           <Link className="login-link" to="/sign_in">Sign in</Link>
         </main>
+        <footer id="main_footer">
+          <small>
+            <a href="" target="_blank">Jelly</a> tribute for educational purposes
+            crafted with ♥ by Liang Lingjiang</small>
+        </footer>
       </div>
     );
   }

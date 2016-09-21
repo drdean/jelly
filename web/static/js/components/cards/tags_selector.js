@@ -78,7 +78,7 @@ export default class TagsSelector extends React.Component {
   render() {
     return (
       <PageClick onClick={::this._close}>
-        <div className="tags-selector">
+        <div className="tags-selector mdl-shadow--6dp">
           <header>Tags <a className="close" onClick={::this._close} href="#"><i className="fa fa-close" /></a></header>
           {::this._renderTagsList()}
         </div>

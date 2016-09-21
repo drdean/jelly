@@ -43,7 +43,7 @@ export default class BoardMembers extends React.Component {
 
     return (
       <PageClick onClick={::this._handleCancelClick}>
-        <ul className="drop-down mdl-card mdl-shadow--2dp active">
+        <ul className="drop-down mdl-card mdl-shadow--6dp active">
           <li>
             <form onSubmit={::this._handleSubmit}>
               <h5>Add new members</h5>

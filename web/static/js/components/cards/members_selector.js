@@ -63,7 +63,7 @@ export default class MembersSelector extends React.Component {
   render() {
     return (
       <PageClick onClick={::this._close}>
-        <div className="members-selector">
+        <div className="members-selector mdl-shadow--6dp">
           <header>Members <a className="close" onClick={::this._close} href="#"><i className="fa fa-close" /></a></header>
           {::this._renderMembersList()}
         </div>

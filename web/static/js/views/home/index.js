@@ -43,7 +43,7 @@ class HomeIndexView extends React.Component {
     return (
       <section>
         <header className="view-header mdl-color-text--grey-600">
-          <h4><i className={iconClasses} /> My boards</h4>
+          <h4>My boards</h4>
         </header>
         {content}
       </section>
@@ -79,10 +79,10 @@ class HomeIndexView extends React.Component {
 
     return (
       <section>
-        <header className="view-header">
-          <h4><i className="fa fa-users" /> Other boards</h4>
+        <header className="view-header mdl-color-text--grey-600">
+          <h4>Other boards</h4>
         </header>
-        <div className="boards-wrapper">
+        <div className="boards-wrapper mdl-grid">
           {::this._renderBoards(invitedBoards)}
         </div>
       </section>
@@ -111,7 +111,7 @@ class HomeIndexView extends React.Component {
 
   render() {
     return (
-      <div className="view-container mdl-layout__container boards index">
+      <div className="view-container boards index">
         {::this._renderOwnedBoards()}
         {::this._renderOtherBoards()}
       </div>

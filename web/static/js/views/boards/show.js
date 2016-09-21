@@ -8,7 +8,7 @@ import Constants            from '../../constants';
 import { setDocumentTitle } from '../../utils';
 import ListForm             from '../../components/lists/form';
 import ListCard             from '../../components/lists/card';
-import BoardMembers           from '../../components/boards/members';
+import BoardMembers         from '../../components/boards/members';
 
 @DragDropContext(HTML5Backend)
 
@@ -201,6 +201,7 @@ class BoardsShowView extends React.Component {
           <h4>{name}</h4>
           {::this._renderMembers()}
         </header>
+
         <div className="canvas-wrapper">
           <div className="canvas">
             <div className="lists-wrapper">
@@ -210,6 +211,7 @@ class BoardsShowView extends React.Component {
           </div>
         </div>
         {this.props.children}
+
       </div>
     );
   }

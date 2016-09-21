@@ -15,11 +15,13 @@
 
   <body>
     <main id="main_container" role="main"></main>
+    <!--
     <footer id="main_footer">
       <small>
         <a href="" target="_blank">Jelly</a> tribute for educational purposes
         crafted with ♥</small>
     </footer>
+    -->
     <script src="<%= static_path(@conn, "/js/application.js") %>"></script>
   </body>
 </html>

@@ -32,7 +32,7 @@ export default class CardModal extends React.Component {
       <div className="form-wrapper">
         <form onSubmit={::this._handleCommentFormSubmit}>
           <header>
-            <h4>Add comment</h4>
+            <h6>Add comment</h6>
           </header>
           <div className="gravatar-wrapper">
             <ReactGravatar className="react-gravatar" email={currentUser.email} https />
@@ -40,10 +40,10 @@ export default class CardModal extends React.Component {
           <div className="form-controls">
             <textarea
               ref="commentText"
-              rows="5"
+              rows="3"
               placeholder="Write a comment..."
               required="true"/>
-            <button type="submit">Save comment</button>
+            <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Comment</button>
           </div>
         </form>
       </div>
@@ -91,7 +91,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="comments-wrapper">
-        <h4>Activity</h4>
+        <h6>Activity</h6>
         {comments}
       </div>
     );
@@ -144,7 +144,7 @@ export default class CardModal extends React.Component {
               placeholder="Description"
               rows="5"
               defaultValue={card.description} />
-            <button type="submit">Save card</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
+            <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Save card</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
           </form>
         </header>
       );
@@ -156,7 +156,7 @@ export default class CardModal extends React.Component {
             {::this._renderMembers()}
             {::this._renderTags()}
           </div>
-          <h5>Description</h5>
+          <h6>Description</h6>
           <p>{card.description}</p>
           <a href="#" onClick={::this._handleHeaderClick}>Edit</a>
         </header>
@@ -175,7 +175,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="card-members">
-      <h5>Members</h5>
+      <h6>Members</h6>
         {memberNodes}
       </div>
     );
@@ -192,7 +192,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="card-tags">
-      <h5>Tags</h5>
+      <h6>Tags</h6>
         {tagsNodes}
       </div>
     );
@@ -267,16 +267,16 @@ export default class CardModal extends React.Component {
       <div className="md-overlay">
         <div className="md-modal">
           <PageClick onClick={::this._closeModal}>
-            <div className="md-content card-modal">
+            <div className="md-content mdl-grid card-modal mdl-card mdl-shadow--6dp">
               <a className="close" href="#" onClick={::this._closeModal}>
                 <i className="fa fa-close"/>
               </a>
-              <div className="info">
+              <div className="info mdl-cell mdl-cell--8-col">
                 {::this._renderHeader()}
                 {::this._renderCommentForm()}
                 {::this._renderComments(card)}
               </div>
-              <div className="options">
+              <div className="options mdl-cell mdl-cell--4-col">
                 <h4>Add</h4>
                 <a className="button" href="#" onClick={::this._handleShowMembersClick}>
                   <i className="fa fa-user"/> Members

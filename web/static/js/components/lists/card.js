@@ -104,7 +104,7 @@ export default class ListCard extends React.Component {
     if (isAddingNewCard) return false;
 
     return (
-      <a className="add-new" href="#" onClick={::this._handleAddClick}>Add a new card...</a>
+      <a className="add-new" href="#" onClick={::this._handleAddClick}><i className="fa fa-plus" /></a>
     );
   }
 
@@ -178,10 +178,12 @@ export default class ListCard extends React.Component {
           <div id={`list_${id}`} className="list" style={styles}>
             <div className="inner">
               {::this._renderHeader()}
-              <div className="cards-wrapper">
-                {::this._renderCards()}
+              <div className="card-list-wrapper">
+                <div className="cards-wrapper">
+                  {::this._renderCards()}
+                </div>
               </div>
-              <footer>
+              <footer className="footer-add-new">
                 {::this._renderForm()}
                 {::this._renderAddNewCard()}
               </footer>

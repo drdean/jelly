@@ -38,6 +38,10 @@ export default class CardForm extends React.Component {
     this.refs.name.focus();
   }
 
+  componentWillUpdate(){
+    componentHandler.upgradeAllRegistered();
+  }
+
   _handleCancelClick(e) {
     e.preventDefault();
 
@@ -48,10 +52,15 @@ export default class CardForm extends React.Component {
     return (
       <PageClick onClick={::this._handleCancelClick}>
         <div className="card form">
-          <form id="new_card_form" onSubmit={::this._handleSubmit}>
-            <textarea ref="name" id="card_name" type="text" required="true" rows={5}/>
-            {::this._renderErrors('name')}
-            <button type="submit">Add</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
+          <form id="new_card_form" className="list_add_card mdl-shadow--2dp" onSubmit={::this._handleSubmit}>
+            <div className="mdl-textfield mdl-js-textfield">
+              <textarea className="mdl-textfield__input" ref="name" id="card_name" type="text" required="true" rows={3}/>
+              <label className="mdl-textfield__label" htmlFor="card_name">Card name...</label>
+              {::this._renderErrors('name')}
+            </div>
+            <div>
+              <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Add</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
+            </div>
           </form>
         </div>
       </PageClick>

@@ -8,6 +8,10 @@ export default class ListForm extends React.Component {
     componentHandler.upgradeAllRegistered();
   }
 
+  componentWillUpdate(){
+    componentHandler.upgradeAllRegistered();
+  }
+
   _handleSubmit(e) {
     e.preventDefault();
 
@@ -50,12 +54,17 @@ export default class ListForm extends React.Component {
 
     return (
       <PageClick onClick={::this._handleCancelClick}>
-        <div className="list form">
+        <div className="form new-list-from-wrapper">
           <div className="inner">
-            <form id="new_list_form" onSubmit={::this._handleSubmit}>
-              <input ref="name" id="list_name" type="text" defaultValue={defaultValue} placeholder="Add a new list..." required="true"/>
-              {::this._renderErrors('name')}
-              <button type="submit">{buttonText}</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
+            <form id="new_list_form" className="new-list-form" onSubmit={::this._handleSubmit}>
+              <div className="mdl-textfield mdl-js-textfield">
+                <input className="mdl-textfield__input" ref="name" id="list_name" type="text" defaultValue={defaultValue} required="true"/>
+                <label className="mdl-textfield__label" htmlFor="list_name">Add a new list...</label>
+                {::this._renderErrors('name')}
+              </div>
+              <div>
+                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">{buttonText}</button> or <a href="#" onClick={::this._handleCancelClick}>cancel</a>
+              </div>
             </form>
           </div>
         </div>

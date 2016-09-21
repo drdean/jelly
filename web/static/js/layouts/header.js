@@ -44,7 +44,7 @@ class Header extends React.Component {
 
     return (
       <PageClick onClick={::this._hideBoards}>
-        <div className="dropdown">
+        <div className="dropdown mdl-card mdl-shadow--6dp">
           {ownedBoardsItemsHeader}
           <ul>
             {ownedBoardsItems}
@@ -55,7 +55,7 @@ class Header extends React.Component {
           </ul>
           <ul className="options">
             <li>
-              <Link to="/" onClick={::this._hideBoards}>View all boards</Link>
+              <Link className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" to="/" onClick={::this._hideBoards}>View all boards</Link>
             </li>
           </ul>
         </div>
@@ -131,7 +131,7 @@ class Header extends React.Component {
           </ul>
         </nav>
         <Link to='/'>
-          <span><img className="logo" src="../images/logo.svg" /></span>
+          <span><img className="logo" src="/images/logo.svg" /></span>
         </Link>
         <nav className="nav-user right">
           <ul>
