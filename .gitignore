@@ -20,3 +20,5 @@ erl_crash.dump
 /priv/static/js/application.js
 
 *.log
+
+!/node_modules/font-awesome
