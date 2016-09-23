@@ -39,6 +39,18 @@
 
       h6
         margin-top: 0
+        margin-bottom: $base-spacing/4
+        font-weight: 700
+        display: inline-block
+        margin-right: $base-spacing/2
+
+      label
+        display: block
+        max-width: 100%
+        margin-bottom: $base-spacing/2
+        font-weight: 600
+        font-size: 12px
+        color: $gray
 
 
   .card-modal
@@ -67,18 +79,19 @@
     .options
       position: relative
       overflow: visible
-      margin-top: 40px
+      margin-top: $base-spacing * 3
 
       .button
         +fill-parent
         +transition
-        background: tint($light-gray, 30)
+        background: rgba($light-gray, .4)
         padding: .5em 1em
         border-radius: $base-border-radius
         display: block
         color: $base-font-color
         font-weight: bold
         margin-bottom: $base-spacing/3
+        font-size: 14px
 
         .fa
           color: $gray
@@ -109,27 +122,35 @@
 
       .gravatar-wrapper
         float: left
-        margin-right: $base-spacing/2
+        margin-right: $base-spacing/1.5
         .react-gravatar
           border-radius: 100%
           width: 30px
           height: 30px
 
       .form-controls
-        background: tint($light-gray, 20)
+        background: rgba($light-gray, .4)
         float: left
         width: 87%
         padding: $base-spacing/2
+        border-radius: $base-border-radius
+
+        textarea
+          background: none
+          border: none
+        .mdl-button
+          font-size: 12px
 
     .comment
       +clearfix
-      margin-bottom: $base-spacing/2
+      margin-bottom: $base-spacing
       animation-duration: .3s
       animation-name: fadeIn
 
       .gravatar-wrapper
         float: left
-        margin-right: $base-spacing/2
+        margin-right: $base-spacing/1.5
+        margin-top: $base-spacing/3
 
       .info-wrapper
         float: left
@@ -141,8 +162,10 @@
           padding: 0
           border: 0px none
         small
+          display: inline-block
           color: $gray
           margin-top: $base-spacing/4
+          font-weight: 0.75em
 
     .items-wrapper
       +clearfix

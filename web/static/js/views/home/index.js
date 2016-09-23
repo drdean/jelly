@@ -43,7 +43,7 @@ class HomeIndexView extends React.Component {
     return (
       <section>
         <header className="view-header mdl-color-text--grey-600">
-          <h4>My boards</h4>
+          <h5>My boards</h5>
         </header>
         {content}
       </section>
@@ -80,7 +80,7 @@ class HomeIndexView extends React.Component {
     return (
       <section>
         <header className="view-header mdl-color-text--grey-600">
-          <h4>Other boards</h4>
+          <h5>Other boards</h5>
         </header>
         <div className="boards-wrapper mdl-grid">
           {::this._renderBoards(invitedBoards)}

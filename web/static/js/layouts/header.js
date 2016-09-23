@@ -34,13 +34,13 @@ class Header extends React.Component {
       return this._createBoardItem(dispatch, currentBoard, socket, board);
     });
 
-    const ownedBoardsItemsHeader = ownedBoardsItems.length > 0 ? <header className="title"><i className="fa fa-user"/> Owned boards</header> : null;
+    const ownedBoardsItemsHeader = ownedBoardsItems.length > 0 ? <header className="title">Owned boards</header> : null;
 
     const invitedBoardsItems = invitedBoards.map((board) => {
       return this._createBoardItem(dispatch, currentBoard, socket, board);
     });
 
-    const invitedBoardsItemsHeaders = invitedBoardsItems.length > 0 ? <header className="title"><i className="fa fa-users"/> Other boards</header> : null;
+    const invitedBoardsItemsHeaders = invitedBoardsItems.length > 0 ? <header className="title">Other boards</header> : null;
 
     return (
       <PageClick onClick={::this._hideBoards}>

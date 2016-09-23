@@ -9,7 +9,7 @@ html
 
     #main_container
       height: 100%
-      background: #fafafa
+      background: $base-background-color
       > div
         height: 100%
 
@@ -32,8 +32,8 @@ html
 
     .main-container
       +display(flex)
-      height: calc(100% - 122px)
-      background: #fafafa
+      height: calc(100% - 102px)
+      background: $base-background-color
 
       .view-container
         flex: 1
@@ -42,5 +42,5 @@ html
         .view-header
           padding: 0 $base-spacing
 
-          h4
+          h5
             margin: 20px 0

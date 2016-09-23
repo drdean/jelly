@@ -63,7 +63,7 @@ export default class Card extends React.Component {
 
     if (comments.length > 0) {
       commentIcon = <small>
-        <i className="fa fa-comment-o"/> {comments.length}
+        <i className="fa fa-commenting-o"/> {comments.length}
       </small>;
     }
 
@@ -110,7 +110,7 @@ export default class Card extends React.Component {
     return connectDragSource(
       connectDropTarget(
         <div id={`card_${id}`} className={classes} style={styles} onClick={::this._handleClick}>
-          <div className="card-content mdl-shadow--2dp">
+          <div className="card-content">
             {::this._renderTags()}
             {name}
             {::this._renderFooter()}

@@ -32,7 +32,7 @@ export default class CardModal extends React.Component {
       <div className="form-wrapper">
         <form onSubmit={::this._handleCommentFormSubmit}>
           <header>
-            <h6>Add comment</h6>
+            <label>Add comment</label>
           </header>
           <div className="gravatar-wrapper">
             <ReactGravatar className="react-gravatar" email={currentUser.email} https />
@@ -79,11 +79,10 @@ export default class CardModal extends React.Component {
             <ReactGravatar className="react-gravatar" email={user.email} https />
           </div>
           <div className="info-wrapper">
-            <h5>{user.first_name}</h5>
+            <h6>{user.first_name}</h6><small>{moment(comment.inserted_at).fromNow()}</small>
             <div className="text">
               {comment.text}
             </div>
-            <small>{moment(comment.inserted_at).fromNow()}</small>
           </div>
         </div>
       );
@@ -91,7 +90,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="comments-wrapper">
-        <h6>Activity</h6>
+        <label>Activity</label>
         {comments}
       </div>
     );
@@ -156,7 +155,7 @@ export default class CardModal extends React.Component {
             {::this._renderMembers()}
             {::this._renderTags()}
           </div>
-          <h6>Description</h6>
+          <label>Description</label>
           <p>{card.description}</p>
           <a href="#" onClick={::this._handleHeaderClick}>Edit</a>
         </header>
@@ -175,7 +174,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="card-members">
-      <h6>Members</h6>
+      <label>Members</label>
         {memberNodes}
       </div>
     );
@@ -192,7 +191,7 @@ export default class CardModal extends React.Component {
 
     return (
       <div className="card-tags">
-      <h6>Tags</h6>
+      <label>Tags</label>
         {tagsNodes}
       </div>
     );
@@ -277,7 +276,7 @@ export default class CardModal extends React.Component {
                 {::this._renderComments(card)}
               </div>
               <div className="options mdl-cell mdl-cell--4-col">
-                <h4>Add</h4>
+                <label>Add</label>
                 <a className="button" href="#" onClick={::this._handleShowMembersClick}>
                   <i className="fa fa-user"/> Members
                 </a>

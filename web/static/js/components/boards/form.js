@@ -33,9 +33,9 @@ export default class BoardForm extends React.Component {
 
     return (
       <PageClick onClick={::this._handleCancelClick}>
-        <div className="board form mdl-cell mdl-cell--3-col">
+        <div className="board form new-board mdl-cell mdl-cell--3-col">
           <div className="inner mdl-card mdl-shadow--2dp">
-            <h5>New board</h5>
+            <h6>New board</h6>
             <form id="new_board_form" className="new-board-form" onSubmit={::this._handleSubmit}>
               <div className="mdl-textfield mdl-js-textfield">
                 <input ref="name" id="board_name" className="mdl-textfield__input" type="text" required="true"/>
