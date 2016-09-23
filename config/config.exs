@@ -9,7 +9,7 @@ use Mix.Config
 config :jelly_board, JellyBoard.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "hWbd3QwLuaWKwJY5qYOKLGSBboxjnW46c4TzBAa+cMODz26RokgHQIJo6Nej3DGr",
+  secret_key_base: "cnMjpXSIGi97lZgjI3jrrBPXs8XhosINvJFpUalc5jy0vbphDY5sktDJqztiXkIf",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: JellyBoard.PubSub,
            adapter: Phoenix.PubSub.PG2]
